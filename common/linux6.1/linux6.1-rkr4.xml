@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <project name="security_rk_tee_user" path="external/security/rk_tee_user"/>
+  <project name="u-boot" path="u-boot"/>
+  <project name="app_lvgl_demo" path="app/lvgl_demo"/>
+  <project name="app_rkpartybox" path="app/rkpartybox"/>
+  <project name="app_rkadk" path="app/rkadk"/>
+  <project name="buildroot" path="buildroot">
+    <linkfile src="envsetup.sh" dest="envsetup.sh"/>
+  </project>
+  <project name="external_alsa-config" path="external/alsa-config"/>
+  <project name="external_chromium" path="external/chromium"/>
+  <project name="external_common_algorithm" path="external/common_algorithm"/>
+  <project name="external_rk_pcba_test" path="external/rk_pcba_test"/>
+  <project name="external_rkscript" path="external/rkscript"/>
+  <project name="external_rktoolkit" path="external/rktoolkit"/>
+  <project name="external_rkupdate" path="external/rkupdate"/>
+  <project name="external_rkwifibt" path="external/rkwifibt"/>
+  <project name="external_rkwifibt-app" path="external/rkwifibt-app"/>
+  <project name="external_gstreamer-rockchip" path="external/gstreamer-rockchip"/>
+  <project name="external_libmali" path="external/libmali"/>
+  <project name="external_linux-rga" path="external/linux-rga"/>
+  <project name="external_recovery" path="external/recovery"/>
+  <project name="external_rk_ethercat_release" path="external/rk_ethercat_release"/>
+  <project name="external_rockchip-test" path="external/rockchip-test"/>
+  <project name="external_rockit" path="external/rockit"/>
+  <project name="security_bin" path="external/security/bin"/>
+  <project name="external_uac_app" path="external/uac_app"/>
+  <project name="external_uvc_app" path="external/uvc_app"/>
+  <project name="external_rockit_uvc" path="external/rockit_uvc"/>
+  <project name="tools" path="tools"/>
+  <project name="security_librkcrypto" path="external/security/librkcrypto"/>
+  <project name="linux" path="kernel"/>
+  <project name="external_mpp" path="external/mpp"/>
+  <project name="gcc-arm-10.3-2021.07-x86_64-aarch64-none-linux-gnu" path="prebuilts/gcc/linux-x86/aarch64/gcc-arm-10.3-2021.07-x86_64-aarch64-none-linux-gnu"/>
+  <project name="gcc-arm-10.3-2021.07-x86_64-arm-none-linux-gnueabihf" path="prebuilts/gcc/linux-x86/arm/gcc-arm-10.3-2021.07-x86_64-arm-none-linux-gnueabihf"/>
+  <project name="rkbin" path="rkbin"/>
+</manifest>
