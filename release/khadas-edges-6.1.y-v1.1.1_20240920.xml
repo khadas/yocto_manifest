@@ -1,81 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-	<remote name="khadas" fetch="."/>
-	<default remote="khadas" revision="khadas-edges-6.1.y-v1.1.1_20240920" sync-j="4"/>
+  <remote name="khadas" fetch="." />
+  <default remote="khadas" revision="khadas-edges-6.1.y-v1.1.1_20240920" sync-j="4"/>
 
-	<project name="bsp_docs" path="docs" revision="khadas-edges-6.1.y-v1.1.1_20240920_release" >
-		<linkfile dest="Copyright_Statement.md" src="licenses/LICENSE"/>
-	</project>
-	<project name="bsp_docs" path="docs/cn" revision="khadas-edges-6.1.y-v1.1.1_20240920_cn" />
-	<project name="bsp_docs" path="docs/en" revision="khadas-edges-6.1.y-v1.1.1_20240920_en" />
-	<project name="bsp_internal_doc" path="docs/cn/RK3588" revision="khadas-edges-6.1.y-v1.1.1_20240920_rk3588-cn"/>
-	<project name="bsp_internal_doc" path="docs/en/RK3588" revision="khadas-edges-6.1.y-v1.1.1_20240920_rk3588-en"/>
+  <!-- Based file name： RK3588_LINUX6.1_SDK_RELEASE_V1.2.0_20241220 -->
+  <include name="include/rk3588_doc-r4.xml"/>
+  <include name="common/linux6.1/linux6.1-rkr4.xml"/>
+  <include name="common/yocto/yocto-scarthgap-release-r4.xml"/>
+  <include name="common/debian/debian12-rkr4.xml"/>
+  <include name="common/dpdk/dpdk-rkr4.xml"/>
+  <include name="common/rkipc/rkipc-rkr4.xml"/>
 
-	<project name="security_rk_tee_user" path="external/security/rk_tee_user"/>
-	<project name="u-boot" path="u-boot"/>
-	<project name="app_lvgl_demo" path="app/lvgl_demo"/>
-	<project name="app_rkpartybox" path="app/rkpartybox"/>
-	<project name="app_rkadk" path="app/rkadk"/>
-	<project name="buildroot" path="buildroot"/>
-	<project name="debian" path="debian"/>
-	<project name="external_alsa-config" path="external/alsa-config"/>
-	<project name="external_drm-cursor" path="external/drm-cursor"/>
-	<project name="external_chromium" path="external/chromium"/>
-	<project name="external_common_algorithm" path="external/common_algorithm"/>
-	<project name="external_rk_pcba_test" path="external/rk_pcba_test"/>
-	<project name="external_rkscript" path="external/rkscript"/>
-	<project name="external_rktoolkit" path="external/rktoolkit"/>
-	<project name="external_rkupdate" path="external/rkupdate"/>
-	<project name="external_rkwifibt" path="external/rkwifibt"/>
-	<project name="external_rkwifibt-app" path="external/rkwifibt-app"/>
-	<project name="external_gstreamer-rockchip" path="external/gstreamer-rockchip"/>
-	<project name="external_libmali" path="external/libmali"/>
-	<project name="external_linux-rga" path="external/linux-rga"/>
-	<project name="external_recovery" path="external/recovery"/>
-	<project name="external_rk_ethercat_release" path="external/rk_ethercat_release"/>
-	<project name="external_rockchip-test" path="external/rockchip-test"/>
-	<project name="external_rockit" path="external/rockit"/>
-	<project name="security_bin" path="external/security/bin"/>
-	<project name="external_uac_app" path="external/uac_app"/>
-	<project name="external_uvc_app" path="external/uvc_app"/>
-	<project name="tools" path="tools"/>
-	<project name="external_xserver" path="external/xserver"/>
-	<project name="security_librkcrypto" path="external/security/librkcrypto"/>
-	<project name="linux" path="kernel"/>
-	<project name="external_mpp" path="external/mpp"/>
-	<project name="gcc-arm-10.3-2021.07-x86_64-aarch64-none-linux-gnu" path="prebuilts/gcc/linux-x86/aarch64/gcc-arm-10.3-2021.07-x86_64-aarch64-none-linux-gnu"/>
-	<project name="gcc-arm-10.3-2021.07-x86_64-arm-none-linux-gnueabihf" path="prebuilts/gcc/linux-x86/arm/gcc-arm-10.3-2021.07-x86_64-arm-none-linux-gnueabihf"/>
-	<project name="rkbin" path="rkbin"/>
+  <!-- device/rockchip for rk3588 -->
+  <project name="device_rockchip" path="device/rockchip">
+	<linkfile src="common/scripts/build.sh" dest="build.sh"/>
+	<linkfile src="common/Makefile" dest="Makefile"/>
+	<linkfile src="common/scripts/rkflash.sh" dest="rkflash.sh"/>
+  </project>
 
-	<project name="yocto_meta-rockchip" path="yocto/meta-rockchip"/>
-	<project name="yocto_poky" path="yocto/meta-browser" revision="khadas-edges-6.1.y-v1.1.1_20240920_meta-browser"/>
-	<project name="yocto_poky" path="yocto/meta-clang" revision="khadas-edges-6.1.y-v1.1.1_20240920_meta-clang"/>
-	<project name="yocto_poky" path="yocto/meta-openembedded" revision="khadas-edges-6.1.y-v1.1.1_20240920_meta-openembedded"/>
-	<project name="yocto_poky" path="yocto/poky" revision="khadas-edges-6.1.y-v1.1.1_20240920_poky">
-		<linkfile src="scripts" dest="yocto/scripts"/>
-		<linkfile src="bitbake" dest="yocto/bitbake"/>
-		<linkfile src="meta-poky" dest="yocto/meta-poky"/>
-		<linkfile src=".templateconf" dest="yocto/.templateconf"/>
-		<linkfile src="oe-init-build-env" dest="yocto/oe-init-build-env"/>
-	</project>
-	<project name="yocto_build_conf" path="yocto/build/conf"/>
-
-	<project name="device_rockchip" path="device/rockchip">
-		<linkfile src="common/scripts/build.sh" dest="build.sh"/>
-		<linkfile src="common/Makefile" dest="Makefile"/>
-		<linkfile src="common/scripts/rkflash.sh" dest="rkflash.sh"/>
-	</project>
-	<project name="external_camera_engine_rkaiq" path="external/camera_engine_rkaiq"/>
-	<project name="external_dpdk" path="external/dpdk"/>
-	<project name="external_rknn-toolkit2" path="external/rknn-toolkit2"/>
-	<project name="external_rknpu2" path="external/rknpu2"/>
-
-	<project name="app_rkipc" path="app/rkipc"/>
-	<project name="app_ipcweb-backend" path="app/ipcweb-backend"/>
-	<project name="external_iva" path="external/iva"/>
-	<project name="external_avs" path="external/avs"/>
-	<project name="external_minilogger" path="external/minilogger"/>
-	<project name="external_rkfsmk" path="external/rkfsmk"/>
-	<project name="external_samples" path="external/samples"/>
+  <project name="external_camera_engine_rkaiq" path="external/camera_engine_rkaiq"/>
+  <project name="external_rknn-toolkit2" path="external/rknn-toolkit2"/>
+  <project name="external_rknpu2" path="external/rknpu2"/>
 
 </manifest>

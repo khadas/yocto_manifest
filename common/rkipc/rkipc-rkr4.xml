@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <project name="app_rkipc" path="app/rkipc"/>
+  <project name="app_ipcweb-backend" path="app/ipcweb-backend"/>
+  <project name="external_iva" path="external/iva"/>
+  <project name="external_avs" path="external/avs"/>
+  <project name="external_minilogger" path="external/minilogger"/>
+  <project name="external_rkfsmk" path="external/rkfsmk"/>
+  <project name="external_samples" path="external/samples"/>
+</manifest>

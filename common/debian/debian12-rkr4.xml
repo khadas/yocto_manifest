@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <project name="debian" path="debian"/>
+  <project name="external_xserver" path="external/xserver"/>
+  <project name="external_drm-cursor" path="external/drm-cursor"/>
+</manifest>

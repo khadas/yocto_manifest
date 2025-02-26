@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <project name="yocto_poky" path="yocto/meta-browser" revision="khadas-edges-6.1.y-v1.1.1_20240920_meta-browser"/>
+  <project name="yocto_poky" path="yocto/meta-clang" revision="khadas-edges-6.1.y-v1.1.1_20240920_meta-clang"/>
+  <project name="yocto_poky" path="yocto/meta-openembedded" revision="khadas-edges-6.1.y-v1.1.1_20240920_meta-openembedded"/>
+  <project name="yocto_meta-rockchip" path="yocto/meta-rockchip"/>
+  <project name="yocto_poky" path="yocto/poky" revision="khadas-edges-6.1.y-v1.1.1_20240920_poky">
+    <linkfile dest="yocto/scripts" src="scripts"/>
+    <linkfile dest="yocto/bitbake" src="bitbake"/>
+    <linkfile dest="yocto/meta-poky" src="meta-poky"/>
+    <linkfile dest="yocto/.templateconf" src=".templateconf"/>
+    <linkfile dest="yocto/oe-init-build-env" src="oe-init-build-env"/>
+  </project>
+  <project name="yocto_build_conf" path="yocto/build/conf"/>
+</manifest>
