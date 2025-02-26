@@ -7,6 +7,7 @@
 		<linkfile dest="Copyright_Statement.md" src="licenses/LICENSE"/>
 	</project>
 	<project name="bsp_docs" path="docs/cn" revision="khadas-edges-6.1.y-v1.1.1_20240920_cn" />
+	<project name="bsp_docs" path="docs/en" revision="khadas-edges-6.1.y-v1.1.1_20240920_en" />
 	<project name="bsp_internal_doc" path="docs/cn/RK3588" revision="khadas-edges-6.1.y-v1.1.1_20240920_rk3588-cn"/>
 	<project name="bsp_internal_doc" path="docs/en/RK3588" revision="khadas-edges-6.1.y-v1.1.1_20240920_rk3588-en"/>
 
